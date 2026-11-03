@@ -27,8 +27,8 @@
 [INFO] -------------------------------------------------------
 [INFO] Running mn.edu.must.sqat.CourseRegistrationServiceTest
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-[ERROR] Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.138 s <<< FAILURE! -- in mn.edu.must.sqat.CourseRegistrationServiceTest
-[ERROR] mn.edu.must.sqat.CourseRegistrationServiceTest.register_nullStudentIdOrCourseId_throwsIllegalArgumentAndNoInteractions -- Time elapsed: 0.956 s <<< FAILURE!
+[ERROR] Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.123 s <<< FAILURE! -- in mn.edu.must.sqat.CourseRegistrationServiceTest
+[ERROR] mn.edu.must.sqat.CourseRegistrationServiceTest.register_nullStudentIdOrCourseId_throwsIllegalArgumentAndNoInteractions -- Time elapsed: 0.944 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -50,8 +50,8 @@ org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.646 s
-[INFO] Finished at: 2026-11-03T11:23:36+08:00
+[INFO] Total time:  3.671 s
+[INFO] Finished at: 2026-11-03T11:37:03+08:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project lab08-mockito: There are test failures.
 [ERROR] 

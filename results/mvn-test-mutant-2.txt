@@ -27,8 +27,8 @@
 [INFO] -------------------------------------------------------
 [INFO] Running mn.edu.must.sqat.CourseRegistrationServiceTest
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-[ERROR] Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.395 s <<< FAILURE! -- in mn.edu.must.sqat.CourseRegistrationServiceTest
-[ERROR] mn.edu.must.sqat.CourseRegistrationServiceTest.register_emailSenderThrows_stillReturnsOkAndRegistrationIsSaved -- Time elapsed: 0.045 s <<< FAILURE!
+[ERROR] Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.202 s <<< FAILURE! -- in mn.edu.must.sqat.CourseRegistrationServiceTest
+[ERROR] mn.edu.must.sqat.CourseRegistrationServiceTest.register_emailSenderThrows_stillReturnsOkAndRegistrationIsSaved -- Time elapsed: 0.033 s <<< FAILURE!
 Wanted but not invoked:
 repository.saveRegistration(
     "B222270080",
@@ -124,8 +124,8 @@ repository.prerequisites("CSA313");
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.499 s
-[INFO] Finished at: 2026-11-03T11:23:11+08:00
+[INFO] Total time:  3.715 s
+[INFO] Finished at: 2026-11-03T11:36:58+08:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project lab08-mockito: There are test failures.
 [ERROR] 

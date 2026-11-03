@@ -41,7 +41,7 @@ class CourseRegistrationServiceTest {
         return new Student(STUDENT_ID, EMAIL, true, coursesTaken);
     }
 
-    /** Бүх шалгалтыг давах "аз жаргалтай зам"-ын stub-ууд. */
+    /** Бүх шалгалтыг давдаг үндсэн (happy path) тохиолдлын stub-ууд. */
     private void stubHappyPath() {
         when(repository.findStudent(STUDENT_ID)).thenReturn(activeStudent(List.of(PREREQ)));
         when(repository.courseExists(COURSE_ID)).thenReturn(true);
@@ -136,7 +136,7 @@ class CourseRegistrationServiceTest {
     }
 
     // A8 — @ParameterizedTest + @CsvSource
-    // Мөр бүр stub-уудын зөвхөн нэг хэсгийг ашигладаг (жишээ нь NO_STUDENT мөр courseExists-д
+    // Зарим мөр stub-уудын зөвхөн нэг хэсгийг ашигладаг (жишээ нь NO_STUDENT мөр courseExists-д
     // хүрэхгүй), тиймээс strict stubs-ийн UnnecessaryStubbingException-ээс сэргийлж lenient() хэрэглэв.
     @ParameterizedTest(name = "[{index}] {0} -> {1}")
     @CsvSource({
@@ -149,7 +149,7 @@ class CourseRegistrationServiceTest {
             case "NO_STUDENT" -> null;
             case "INACTIVE" -> new Student(STUDENT_ID, EMAIL, false, List.of(PREREQ));
             case "MISSING_PREREQ" -> activeStudent(List.of());
-            default -> throw new IllegalStateException("Тодорхойгүй сценари: " + scenario);
+            default -> throw new IllegalStateException("Тодорхойгүй хувилбар: " + scenario);
         };
         lenient().when(repository.findStudent(STUDENT_ID)).thenReturn(student);
         lenient().when(repository.courseExists(COURSE_ID)).thenReturn(true);
