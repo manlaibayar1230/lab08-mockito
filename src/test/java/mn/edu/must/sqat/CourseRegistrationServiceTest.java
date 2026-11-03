@@ -112,10 +112,12 @@ class CourseRegistrationServiceTest {
         verify(repository).saveRegistration(STUDENT_ID, COURSE_ID);
     }
 
-    // A6 — assertThrows
+    // A6 — assertThrows. Хоёр аргумент тус бүрийн null-ийг шалгана: эхэндээ зөвхөн studentId-г
+    // шалгадаг байсан тул "|| courseId == null"-г устгасан мутант 3-ыг барьж чадаагүй.
     @Test
-    void register_nullStudentId_throwsIllegalArgumentAndNoInteractions() {
+    void register_nullStudentIdOrCourseId_throwsIllegalArgumentAndNoInteractions() {
         assertThrows(IllegalArgumentException.class, () -> service.register(null, COURSE_ID));
+        assertThrows(IllegalArgumentException.class, () -> service.register(STUDENT_ID, null));
 
         verifyNoInteractions(repository, emailSender);
     }
